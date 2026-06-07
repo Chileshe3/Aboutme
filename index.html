@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chileshe Besa — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-text">CB</div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">CB</div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Welcome to my world</p>
+      <h1 class="hero-title">
+        <span class="hero-name reveal">Chileshe Besa</span>
+      </h1>
+      <p class="hero-subtitle reveal">
+        <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal">Engineer.<br>Builder.<br><em>Innovator.</em></h2>
+          <p class="about-body reveal">
+            I'm a Chemical Engineer turned full-stack developer with a deep passion for 
+            bridging the physical and digital worlds. I love crafting elegant solutions — 
+            whether it's modelling fluid dynamics or architecting robust mobile apps.
+          </p>
+          <p class="about-body reveal">
+            Based in Zambia, I thrive at the intersection of science, code, and creativity. 
+            I believe great software is like great engineering — precise, purposeful, and built to last.
+          </p>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-number" data-target="12">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Languages</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="about-card-large">
+            <div class="about-card-inner">
+              <div class="about-initials">CB</div>
+              <div class="about-tag">Chemical Engineer</div>
+              <div class="about-tag">Mobile Developer</div>
+              <div class="about-tag">Web Designer</div>
+              <div class="about-tag">Problem Solver</div>
+            </div>
+            <div class="about-card-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-label reveal">02 — Skills</div>
+      <h2 class="section-title reveal">My Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML / CSS</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Mobile</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Kotlin / Android</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Firebase</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Engineering</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Python / NumPy</span><span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>MATLAB</span><span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Git / GitHub</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Figma</span><span>65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label reveal">03 — Projects</div>
+      <h2 class="section-title reveal">Selected Work</h2>
+
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="engineering">Engineering</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-number">01</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Android</span>
+            </div>
+            <h3 class="project-title">Messaging App</h3>
+            <p class="project-desc">End-to-end private messaging application with real-time chat, user authentication, and push notifications built with Kotlin and Firebase Realtime Database.</p>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-number">02</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">Fully responsive portfolio website featuring smooth animations, particle effects, and a clean dark aesthetic. Designed and coded from scratch.</p>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="engineering">
+          <div class="project-number">03</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">SymPy</span>
+            </div>
+            <h3 class="project-title">Integration Calculator</h3>
+            <p class="project-desc">A powerful symbolic and numerical calculator for solving complex integration and differentiation problems with step-by-step solutions.</p>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+        <div class="project-card reveal" data-category="engineering">
+          <div class="project-number">04</div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">MATLAB</span>
+              <span class="tag">Simulation</span>
+            </div>
+            <h3 class="project-title">Process Simulator</h3>
+            <p class="project-desc">Chemical process flow simulation tool modelling heat exchanger performance, reactor kinetics, and distillation column separation efficiency.</p>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label reveal">04 — Contact</div>
+      <h2 class="section-title reveal">Let's Build<br>Something.</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-desc">Have a project in mind or just want to say hello? I'm always open to new opportunities and interesting conversations.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">chileshe@example.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Zambia, Africa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="nameInput" class="form-input" placeholder=" " required />
+              <label class="form-label" for="nameInput">Your Name</label>
+              <span class="form-error" id="nameError">Please enter your name</span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="emailInput" class="form-input" placeholder=" " required />
+              <label class="form-label" for="emailInput">Email Address</label>
+              <span class="form-error" id="emailError">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subjectInput" class="form-input" placeholder=" " />
+              <label class="form-label" for="subjectInput">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="messageInput" class="form-input form-textarea" placeholder=" " required rows="5"></textarea>
+              <label class="form-label" for="messageInput">Message</label>
+              <span class="form-error" id="messageError">Please enter your message</span>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CB</div>
+      <p class="footer-copy">&copy; 2026 Chileshe Besa. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
